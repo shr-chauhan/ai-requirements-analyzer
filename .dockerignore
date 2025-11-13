@@ -1,0 +1,15 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.git
+.gitignore
+*.md
+.DS_Store
+*.docx
+requirements_*.docx
+.streamlit/secrets.toml
+

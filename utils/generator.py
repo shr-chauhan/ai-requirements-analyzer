@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 
-MODEL = "gpt-realtime-mini"
+MODEL = "gpt-4o-mini"  # Using gpt-4o-mini - the most cost-effective option (cheaper than gpt-3.5-turbo)
 
 
 def make_client(api_key: str = None):
@@ -34,7 +34,8 @@ def generate_section(prompt_template: str, requirement_text: str, api_key: str =
 def generate_all(requirement_text: str, prompts_dir: str = "prompts", api_key: str = None, max_tokens: int = 2000):
     outputs = {}
     # load templates
-    for name in ["user_stories.txt", "acceptance_criteria.txt", "test_cases.txt", "flows.txt", "summary.txt"]:
+    # Flows generation commented out to save API costs - can be re-enabled later
+    for name in ["user_stories.txt", "acceptance_criteria.txt", "test_cases.txt", "summary.txt"]:  # "flows.txt" commented out
         path = os.path.join(prompts_dir, name)
         try:
             with open(path, "r", encoding="utf-8") as f:
@@ -45,4 +46,8 @@ def generate_all(requirement_text: str, prompts_dir: str = "prompts", api_key: s
             raise Exception(f"Prompt file not found: {path}")
         except Exception as e:
             raise Exception(f"Error processing {name}: {e}")
+    
+    # Set empty flows to prevent errors when accessing outputs.get('flows')
+    outputs['flows'] = ""
+    
     return outputs
