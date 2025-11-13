@@ -1,0 +1,5 @@
+You are an expert business analyst. Convert the following business requirement into a set of epics and detailed user stories. For each user story, include a short description and acceptance criteria in Gherkin format.
+
+Requirement:
+
+{requirement}

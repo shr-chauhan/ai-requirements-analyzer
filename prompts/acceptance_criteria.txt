@@ -1,0 +1,5 @@
+You are an expert QA analyst. Given the business requirement below, write clear acceptance criteria in Gherkin format for the main user stories. Keep criteria concise and testable.
+
+Requirement:
+
+{requirement}

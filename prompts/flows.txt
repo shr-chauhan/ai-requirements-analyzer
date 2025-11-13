@@ -1,0 +1,5 @@
+You are a process designer. From the requirement below generate a simple Mermaid flowchart that describes the main process flow. Output only the mermaid flowchart text (no extra explanation). Use concise node names.
+
+Requirement:
+
+{requirement}

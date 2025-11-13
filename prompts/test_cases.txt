@@ -1,0 +1,5 @@
+You are a QA engineer. From the following requirement generate test scenarios and simple test cases (steps and expected result). Group by story or feature where possible.
+
+Requirement:
+
+{requirement}

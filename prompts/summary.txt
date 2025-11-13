@@ -1,0 +1,5 @@
+Write a 3-4 sentence executive summary of the requirement, listing primary stakeholders, major assumptions, and top risks.
+
+Requirement:
+
+{requirement}
